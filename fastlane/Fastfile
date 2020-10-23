@@ -13,6 +13,9 @@
 # Uncomment the line if you want fastlane to automatically update itself
 # update_fastlane
 
+build_path = "build"
+sh "mkdir -p #{build_path}"
+
 default_platform(:ios)
 
 platform :ios do
@@ -20,5 +23,32 @@ platform :ios do
   lane :custom_lane do
     # add actions here: https://docs.fastlane.tools/actions
     puts "hello world"
+  end
+  desc "Clone source code"
+  desc "#### Options"
+  desc "* **source_code_url** source code git url"
+  desc "* **target_path** target path to clone source code"
+  lane :clone_source_code do |options|
+    source_code_url = options[:source_code_url]
+    target_path = options[:target_path]
+    sh "git clone #{source_code_url} #{target_path}"
+  end
+  desc "build AlitaNativeLib.framework"
+  desc "#### Options"
+  desc "* **source_code_url** source code git url"
+  lane :build_framework do |options|
+    source_code_url = options[:source_code_url]
+    sh "mkdir -p #{build_path}"
+    target_path = "#{build_path}/micro-app"
+    clone_source_code(source_code_url: source_code_url, target_path: target_path)
+    sh "cd #{target_path}
+    bundle exec fastlane build_AlitaNative
+    "
+    framework_path = "#{target_path}/build/AlitaNativeLib.framework"
+    if (Dir.exist? "#{framework_path}")
+      sh "cp -R #{framework_path} ../"
+    else
+      raise "build framework fail"
+    end
   end
 end

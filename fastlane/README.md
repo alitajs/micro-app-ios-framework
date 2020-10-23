@@ -21,6 +21,26 @@ or alternatively using `brew install fastlane`
 fastlane ios custom_lane
 ```
 Description of what the lane does
+### ios clone_source_code
+```
+fastlane ios clone_source_code
+```
+Clone source code
+
+#### Options
+
+* **source_code_url** source code git url
+
+* **target_path** target path to clone source code
+### ios build_framework
+```
+fastlane ios build_framework
+```
+build AlitaNativeLib.framework
+
+#### Options
+
+* **source_code_url** source code git url
 
 ----
 
