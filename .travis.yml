@@ -3,4 +3,4 @@ osx_image: xcode11.6
 install:
   - bundle install
 script:
-  - fastlane build_framework
+  - bundle exec fastlane build_framework
