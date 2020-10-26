@@ -1,0 +1,6 @@
+language: objective-c
+osx_image: xcode11.6
+install:
+  - bundle install
+script:
+  - fastlane build_framework
