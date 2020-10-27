@@ -21,8 +21,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *appIconUrl;
 @property (nonatomic, copy) NSNumber *versionId;
 
-+ (NSURLSessionDataTask *)microAppListWithMainAppid:(NSString *)mainAppId callback:(void (^)(NSArray<AlitaMicroApp *> * __nullable list, AlitaPagination * __nullable pagination, NSError * __nullable error))callback;
+/// 获取微应用列表
+/// @param callback 回调
++ (NSURLSessionDataTask *)microAppListWithCallback:(void (^)(NSArray<AlitaMicroApp *> * __nullable list, AlitaPagination * __nullable pagination, NSError * __nullable error))callback;
 
+/// 微应用下载链接
 - (NSURL *)downloadURL;
 
 @end

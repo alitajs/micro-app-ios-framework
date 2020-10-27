@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) WKWebView *webView;
 
 - (void)setupNavBarWithBackgroundColor:(UIColor * __nullable)backgroundColor textColor:(UIColor * __nullable)textColor fontSize:(UIFont * __nullable)font;
+- (void)showLaunchView:(BOOL)visible;
 
 @end
 
