@@ -39,8 +39,8 @@ platform :ios do
     remote = options[:remote] ? options[:remote] : (ENV["DEPLOY_REMOTE"] ? ENV["DEPLOY_REMOTE"] : "origin")
     allowed_branch = options[:allow_branch] ? options[:allow_branch] : (ENV["DEPLOY_BRANCH"] ? ENV["DEPLOY_BRANCH"] : "main")
 
-    # checkout allow branch
-    sh "git checkout #{allowed_branch}"
+    # checkout allow branch, -B create new branch if it doesn’t exist
+    sh "git checkout -B #{allowed_branch}"
 
     #Ensure we are on the right branch
     ensure_git_branch(
