@@ -35,6 +35,17 @@ platform :ios do
   desc "* **source_code_url** source code git url"
   desc "* **tag** tag to build"
   lane :build_framework do |options|
+
+    remote = options[:remote] ? options[:remote] : (ENV["DEPLOY_REMOTE"] ? ENV["DEPLOY_REMOTE"] : "origin")
+    allowed_branch = options[:allow_branch] ? options[:allow_branch] : (ENV["DEPLOY_BRANCH"] ? ENV["DEPLOY_BRANCH"] : "main")
+
+    #Ensure we are on the right branch
+    ensure_git_branch(
+      branch:allowed_branch
+    )
+  
+    sh("git pull #{remote} #{allowed_branch}")
+
     source_code_url = options[:source_code_url]
     sh "mkdir -p #{build_path}"
     target_path = "#{build_path}/micro-app"
@@ -83,7 +94,11 @@ platform :ios do
     )
 
     #push the branch
-    push_to_git_remote
+    push_to_git_remote(
+      remote: remote,
+      local_branch: allow_branch,
+      remote_branch: allow_branch
+    )
 
     # add tag
     add_git_tag(
