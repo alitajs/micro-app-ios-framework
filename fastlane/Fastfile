@@ -19,6 +19,7 @@ sh "mkdir -p #{build_path}"
 default_platform(:ios)
 
 platform :ios do
+
   desc "Clone source code"
   desc "#### Options"
   desc "* **source_code_url** source code git url"
@@ -28,14 +29,36 @@ platform :ios do
     target_path = options[:target_path]
     sh "git clone #{source_code_url} #{target_path}"
   end
+  
   desc "build AlitaNativeLib.framework"
   desc "#### Options"
   desc "* **source_code_url** source code git url"
+  desc "* **tag** tag to build"
   lane :build_framework do |options|
     source_code_url = options[:source_code_url]
     sh "mkdir -p #{build_path}"
     target_path = "#{build_path}/micro-app"
+    sh "rm -rf #{target_path}"
     clone_source_code(source_code_url: source_code_url, target_path: target_path)
+    # get source code latest tag
+    tag = sh "cd #{target_path} && git describe --tags --abbrev=0"
+    tag = tag.strip
+    if options[:tag]
+      tag = options[:tag]
+    end
+    sh "cd #{target_path} && git checkout #{tag}"
+    curTag = sh "cd #{target_path} && git describe --tags --abbrev=0"
+    curTag = curTag.strip
+    if tag != curTag
+      raise "tag #{tag} not exists on source code repo".red
+    end
+
+    # check if tag exists at this repo
+    if git_tag_exists(tag: tag)
+      next
+    end
+
+    # build framework
     sh "cd #{target_path}
     bundle exec fastlane build_AlitaNative
     "
@@ -45,5 +68,23 @@ platform :ios do
     else
       raise "build framework fail"
     end
+
+    # bump podspec
+    version_bump_podspec(
+      path: './AlitaNativeLib.podspec',
+      version_number: tag
+    )
+
+    # commit changes
+    git_commit(
+      path: './',
+      message: "Update to version:#{tag}"
+    )
+
+    # add tag
+    add_git_tag(
+      tag: tag,
+    )
+
   end
 end

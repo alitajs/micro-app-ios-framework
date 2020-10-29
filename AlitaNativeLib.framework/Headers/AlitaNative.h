@@ -48,6 +48,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param microApp 小程序对象
 + (void)viewController:(UIViewController *)viewController openMicroApp:(AlitaMicroApp *)microApp;
 
+/// 预下载列表里的微应用
+/// @param microAppList 微应用列表
++ (void)downloadMicroAppList:(NSArray<AlitaMicroApp *> *)microAppList;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -37,6 +37,8 @@ build AlitaNativeLib.framework
 
 * **source_code_url** source code git url
 
+* **tag** tag to build
+
 ----
 
 This README.md is auto-generated and will be re-generated every time [fastlane](https://fastlane.tools) is run.
