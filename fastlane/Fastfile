@@ -39,9 +39,12 @@ platform :ios do
     remote = options[:remote] ? options[:remote] : (ENV["DEPLOY_REMOTE"] ? ENV["DEPLOY_REMOTE"] : "origin")
     allowed_branch = options[:allow_branch] ? options[:allow_branch] : (ENV["DEPLOY_BRANCH"] ? ENV["DEPLOY_BRANCH"] : "main")
 
+    # checkout allow branch
+    sh "git checkout #{allow_branch}"
+
     #Ensure we are on the right branch
     ensure_git_branch(
-      branch:allowed_branch
+      branch: allowed_branch
     )
   
     sh("git pull #{remote} #{allowed_branch}")
