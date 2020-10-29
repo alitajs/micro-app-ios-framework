@@ -40,7 +40,7 @@ platform :ios do
     allowed_branch = options[:allow_branch] ? options[:allow_branch] : (ENV["DEPLOY_BRANCH"] ? ENV["DEPLOY_BRANCH"] : "main")
 
     # checkout allow branch
-    sh "git checkout #{allow_branch}"
+    sh "git checkout #{allowed_branch}"
 
     #Ensure we are on the right branch
     ensure_git_branch(
@@ -99,8 +99,8 @@ platform :ios do
     #push the branch
     push_to_git_remote(
       remote: remote,
-      local_branch: allow_branch,
-      remote_branch: allow_branch
+      local_branch: allowed_branch,
+      remote_branch: allowed_branch
     )
 
     # add tag
