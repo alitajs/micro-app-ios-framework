@@ -55,6 +55,7 @@ platform :ios do
 
     # check if tag exists at this repo
     if git_tag_exists(tag: tag)
+      puts "tag: #{tag} already exists"
       next
     end
 
@@ -81,10 +82,16 @@ platform :ios do
       message: "Update to version:#{tag}"
     )
 
+    #push the branch
+    push_to_git_remote
+
     # add tag
     add_git_tag(
       tag: tag,
     )
+
+    # push the tag
+    push_git_tags
 
   end
 end
