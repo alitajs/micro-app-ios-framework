@@ -25,8 +25,15 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param callback 回调
 + (NSURLSessionDataTask *)microAppListWithCallback:(void (^)(NSArray<AlitaMicroApp *> * __nullable list, AlitaPagination * __nullable pagination, NSError * __nullable error))callback;
 
+/// 从字典初始化对象
+/// @param dictionary 初始化数据
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+
 /// 微应用下载链接
 - (NSURL *)downloadURL;
+
+/// 转成字典
+- (NSDictionary *)dictionary;
 
 @end
 
