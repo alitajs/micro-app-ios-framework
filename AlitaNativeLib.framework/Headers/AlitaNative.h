@@ -38,6 +38,12 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param userData 传给微应用的数据
 + (UIViewController *)viewControllerWithURL:(NSURL *)url userData:(NSDictionary * __nullable)userData;
 
+/// 打开h5链接
+/// @param viewController 要打开小程序的控制器
+/// @param url file:// 或 http(s):// 开头的链接
+/// @param userData 传给小程序的数据
++ (void)viewController:(UIViewController *)viewController openURL:(NSURL *)url userData:(NSDictionary * __nullable)userData;
+
 /// 打开本地小程序压缩包
 /// @param viewController 要打开小程序的控制器
 /// @param url 本地压缩包文件地址
