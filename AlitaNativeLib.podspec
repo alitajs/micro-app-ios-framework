@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "AlitaNativeLib"
-  spec.version      = "0.0.1-alpha.3"
+  spec.version      = "0.0.1-alpha.4"
   spec.summary      = "Alita Micro App iOS SDK"
   spec.description  = <<-DESC
                       An framework provide micro app platform ability.

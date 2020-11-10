@@ -19,10 +19,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSDictionary *userData;
 @property (nonatomic, strong, readonly) WKWebView *webView;
 
-- (instancetype)initWithAppUrl:(NSURL *)appUrl userData:(NSDictionary *)userData;
+- (instancetype)initWithAppUrl:(NSURL *)appUrl userData:(NSDictionary * __nullable)userData;
 
 - (void)setupNavBarWithBackgroundColor:(UIColor * __nullable)backgroundColor textColor:(UIColor * __nullable)textColor fontSize:(UIFont * __nullable)font;
 - (void)showLaunchView:(BOOL)visible;
+- (void)callHandler:(NSString*)handlerName data:(id __nullable)data responseCallback:(void (^ __nullable)(id responseData))responseCallback;
 
 @end
 
