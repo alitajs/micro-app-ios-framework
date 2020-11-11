@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 // 初始数据
 @property (nonatomic, copy) NSDictionary *userData;
 @property (nonatomic, strong, readonly) WKWebView *webView;
+/// 当微应用为主应用时，可使用下面属性隐藏导航栏
+@property (nonatomic, assign) BOOL hideNavBar;
 
 - (instancetype)initWithAppUrl:(NSURL *)appUrl userData:(NSDictionary * __nullable)userData;
 

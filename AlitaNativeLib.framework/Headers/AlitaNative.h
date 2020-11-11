@@ -31,12 +31,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 打开一个微应用
 /// @param url file:// 或 http(s):// 开头的链接
-+ (UIViewController *)viewControllerWithURL:(NSURL *)url;
++ (UINavigationController *)viewControllerWithURL:(NSURL *)url;
 
 /// 创建一个微应用
 /// @param url  file:// 或 http(s):// 开头的链接
 /// @param userData 传给微应用的数据
-+ (UIViewController *)viewControllerWithURL:(NSURL *)url userData:(NSDictionary * __nullable)userData;
++ (UINavigationController *)viewControllerWithURL:(NSURL *)url userData:(NSDictionary * __nullable)userData;
 
 /// 打开h5链接
 /// @param viewController 要打开小程序的控制器
