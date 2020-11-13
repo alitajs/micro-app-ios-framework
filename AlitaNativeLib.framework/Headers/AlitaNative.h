@@ -47,12 +47,14 @@ NS_ASSUME_NONNULL_BEGIN
 /// 打开本地小程序压缩包
 /// @param viewController 要打开小程序的控制器
 /// @param url 本地压缩包文件地址
-+ (void)viewController:(UIViewController *)viewController openWebWithZipURL:(NSURL *)url;
+/// @param completion 当失败时 error 不为空
++ (void)viewController:(UIViewController *)viewController openWebWithZipURL:(NSURL *)url completion:(void (^ __nullable)(NSError * __nullable error))completion;
 
 /// 打开远程小程序压缩包
 /// @param viewController 要打开小程序的控制器
 /// @param url 远程压缩包文件地址
-+ (void)viewController:(UIViewController *)viewController openWebWithRemoteZipURL:(NSURL *)url;
+/// @param completion 当失败时 error 不为 nil
++ (void)viewController:(UIViewController *)viewController openWebWithRemoteZipURL:(NSURL *)url completion:(void (^ __nullable)(NSError *error))completion;
 
 /// 打开小程序对象
 /// @param viewController 要打开小程序的控制器
@@ -64,6 +66,20 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param microApp 小程序对象
 /// @param userData 传给小程序的数据
 + (void)viewController:(UIViewController *)viewController openMicroApp:(AlitaMicroApp *)microApp withUserData:(NSDictionary * __nullable)userData;
+
+/// 打开小程序 （推荐使用这个方法，失败时可以获取到错误原因）
+/// @param viewController 要打开小程序的控制器
+/// @param microApp 小程序对象
+/// @param userData 传给小程序的数据
+/// @param completion 当失败时error不为空
++ (void)viewController:(UIViewController *)viewController openMicroApp:(AlitaMicroApp *)microApp withUserData:(NSDictionary * __nullable)userData completion:(void (^ __nullable)(NSError * __nullable error))completion;
+
+/// 通过微应用 appid 打开小程序
+/// @param viewController 要打开小程序的控制器
+/// @param appId 微应用appid
+/// @param userData 传给微应用的数据
+/// @param completion 当失败时 error 不为空
++ (void)viewController:(UIViewController *)viewController microAppId:(NSString *)appId withUserData:(NSDictionary * __nullable)userData completion:(void (^ __nullable)(NSError * __nullable error))completion;
 
 /// 预下载列表里的微应用
 /// @param microAppList 微应用列表

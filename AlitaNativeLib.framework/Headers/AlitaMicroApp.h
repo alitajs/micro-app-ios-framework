@@ -25,6 +25,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param callback 回调
 + (NSURLSessionDataTask *)microAppListWithCallback:(void (^)(NSArray<AlitaMicroApp *> * __nullable list, AlitaPagination * __nullable pagination, NSError * __nullable error))callback;
 
+/// 通过微应用 appId 获取微应用信息
+/// @param appId 微应用 appId
+/// @param callback 回调
++ (NSURLSessionDataTask *)fetchMicroAppByAppId:(NSString *)appId callback:(void (^)(AlitaMicroApp * __nullable app, NSError * __nullable error))callback;
+
 /// 从字典初始化对象
 /// @param dictionary 初始化数据
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
