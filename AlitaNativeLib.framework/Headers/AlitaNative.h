@@ -50,6 +50,12 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param completion 当失败时 error 不为空
 + (void)viewController:(UIViewController *)viewController openWebWithZipURL:(NSURL *)url completion:(void (^ __nullable)(NSError * __nullable error))completion;
 
+/// 打开本地解压包
+/// @param viewController 要打开小程序的控制器
+/// @param url 解压文件夹路径
+/// @param userData 传给小程序的数据
++ (void)viewController:(UIViewController *)viewController openUnzipFile:(NSURL *)url userData:(NSDictionary * __nullable)userData;
+
 /// 打开远程小程序压缩包
 /// @param viewController 要打开小程序的控制器
 /// @param url 远程压缩包文件地址

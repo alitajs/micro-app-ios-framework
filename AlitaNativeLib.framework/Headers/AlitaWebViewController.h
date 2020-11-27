@@ -11,6 +11,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class AlitaMicroAppConfig;
+
 @interface AlitaWebViewController : UIViewController
 
 // 网页地址
@@ -20,8 +22,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) WKWebView *webView;
 /// 当微应用为主应用时，可使用下面属性隐藏导航栏
 @property (nonatomic, assign) BOOL hideNavBar;
+@property (nonatomic, assign) UIStatusBarStyle statusBarStyle;
+@property (nonatomic, strong, readonly) AlitaMicroAppConfig *config;
 
 - (instancetype)initWithAppUrl:(NSURL *)appUrl userData:(NSDictionary * __nullable)userData;
+- (instancetype)initWithAppUrl:(NSURL *)appUrl userData:(NSDictionary * __nullable)userData config:(AlitaMicroAppConfig * __nullable)config;
 
 - (void)setupNavBarWithBackgroundColor:(UIColor * __nullable)backgroundColor textColor:(UIColor * __nullable)textColor fontSize:(UIFont * __nullable)font;
 - (void)showLaunchView:(BOOL)visible;
