@@ -90,6 +90,11 @@ platform :ios do
       version_number: tag
     )
 
+    # git add
+    git_add(
+      path: './'
+    )
+
     # commit changes
     git_commit(
       path: './',
