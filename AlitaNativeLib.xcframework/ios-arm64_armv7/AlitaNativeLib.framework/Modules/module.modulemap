@@ -1,0 +1,6 @@
+framework module AlitaNativeLib {
+  umbrella header "AlitaNativeLib.h"
+
+  export *
+  module * { export * }
+}
