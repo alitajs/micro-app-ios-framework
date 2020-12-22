@@ -49,7 +49,7 @@ Pod::Spec.new do |spec|
   #  non-essential files like tests, examples and documentation.
   #
 
-  spec.vendored_frameworks = "AlitaNativeLib.framework"
+  spec.vendored_frameworks = "AlitaNativeLib.xcframework"
 
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

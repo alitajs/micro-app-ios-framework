@@ -73,11 +73,11 @@ platform :ios do
       next
     end
 
-    # build framework
+    # build xcframework
     sh "cd #{target_path}
     bundle exec fastlane build_AlitaNative
     "
-    framework_path = "#{target_path}/build/AlitaNativeLib.framework"
+    framework_path = "#{target_path}/build/AlitaNativeLib.xcframework"
     if (Dir.exist? "#{framework_path}")
       sh "cp -R #{framework_path} ../"
     else
