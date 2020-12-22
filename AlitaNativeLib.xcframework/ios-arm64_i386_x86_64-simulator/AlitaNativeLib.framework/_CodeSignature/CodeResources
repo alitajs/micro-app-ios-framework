@@ -14,7 +14,23 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		lqnuQ56PIeSHyGaSkpJeYS2alp8=
+		X0b07TbSo8n7W5Iumva5HF8nJOc=
+		</data>
+		<key>Headers/AlitaCommand.h</key>
+		<data>
+		RhJEg1C74DQJqvr9I26F7h4Rw6E=
+		</data>
+		<key>Headers/AlitaCommandResult.h</key>
+		<data>
+		9ExVGkBZZbFRMSojrBmvNSWdfmw=
+		</data>
+		<key>Headers/AlitaJSBridge.h</key>
+		<data>
+		pyrek+q5ecPYjpZrw0mbS+ARRYQ=
+		</data>
+		<key>Headers/AlitaJSBridgeHeaders.h</key>
+		<data>
+		SpJgDU9RWR+QtIoWC1rosVQduH8=
 		</data>
 		<key>Headers/AlitaMicroApp.h</key>
 		<data>
@@ -26,7 +42,7 @@
 		</data>
 		<key>Headers/AlitaNative.h</key>
 		<data>
-		T9lFzv3GHY89S3HZp/sa24sgKj4=
+		l86qaahE618SNM55gHcnBuqpbSA=
 		</data>
 		<key>Headers/AlitaNativeLib.h</key>
 		<data>
@@ -36,13 +52,17 @@
 		<data>
 		0P5PJ/b8vbDN/sy5BNeXDFwracA=
 		</data>
+		<key>Headers/AlitaPlugin.h</key>
+		<data>
+		tSiCcIPRCQ9KwBLfflRMF33VjIc=
+		</data>
 		<key>Headers/AlitaWebViewController.h</key>
 		<data>
 		+1d2G6XsC5CnpY+hDa0Ik91zwOg=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Nw9tglQ4kQYupbFBKv3xAg5tUdg=
+		eIOYfW4Cga8QdY1FeLvX18pEniQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -77,11 +97,55 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			lqnuQ56PIeSHyGaSkpJeYS2alp8=
+			X0b07TbSo8n7W5Iumva5HF8nJOc=
 			</data>
 			<key>hash2</key>
 			<data>
-			OSo2dp9nYDkhO07xw/QRvaHsV0SqPhD+DzRoYbb6Vjo=
+			hviOXoUsIlczXTNTVdpLWmSwPXK9euNVr3+Luiu6gPM=
+			</data>
+		</dict>
+		<key>Headers/AlitaCommand.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			RhJEg1C74DQJqvr9I26F7h4Rw6E=
+			</data>
+			<key>hash2</key>
+			<data>
+			U5f/gEdIwiuIkuoaVI1F4XunXKEXoQNgTmcfFvXlHVU=
+			</data>
+		</dict>
+		<key>Headers/AlitaCommandResult.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			9ExVGkBZZbFRMSojrBmvNSWdfmw=
+			</data>
+			<key>hash2</key>
+			<data>
+			+8iXMTnGFO46JgyQedMK8auAE/1rs5OMn4fSLkI+X6U=
+			</data>
+		</dict>
+		<key>Headers/AlitaJSBridge.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			pyrek+q5ecPYjpZrw0mbS+ARRYQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			3C83iCj6SlcszNdXoRcaNM6is3zWjYWGy5RNCpM6ZV8=
+			</data>
+		</dict>
+		<key>Headers/AlitaJSBridgeHeaders.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			SpJgDU9RWR+QtIoWC1rosVQduH8=
+			</data>
+			<key>hash2</key>
+			<data>
+			hnP2fAHE6oUQiQlfuWoZFQc2nyLdEkfKVCdTwo4oqXA=
 			</data>
 		</dict>
 		<key>Headers/AlitaMicroApp.h</key>
@@ -110,11 +174,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			T9lFzv3GHY89S3HZp/sa24sgKj4=
+			l86qaahE618SNM55gHcnBuqpbSA=
 			</data>
 			<key>hash2</key>
 			<data>
-			89K8zVGHjB5ThI5ROiHY48x2UZxW77UU8WpTFTRvW88=
+			oxRkhhhcV4NPbs7+z22RCGh0/vXueaKC2G2HB9tmsEU=
 			</data>
 		</dict>
 		<key>Headers/AlitaNativeLib.h</key>
@@ -137,6 +201,17 @@
 			<key>hash2</key>
 			<data>
 			wTc9hKsx5jq8Ic7jmfefb6dhX1SZs9ASWxbehwcnrbE=
+			</data>
+		</dict>
+		<key>Headers/AlitaPlugin.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			tSiCcIPRCQ9KwBLfflRMF33VjIc=
+			</data>
+			<key>hash2</key>
+			<data>
+			BwaUl+GkAiqM3h8VWGLNsmH6WxWsYir0z5R8udKIrXc=
 			</data>
 		</dict>
 		<key>Headers/AlitaWebViewController.h</key>

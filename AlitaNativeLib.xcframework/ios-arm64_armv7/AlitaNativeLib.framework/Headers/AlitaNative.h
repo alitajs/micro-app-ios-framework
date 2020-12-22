@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "AlitaPlugin.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -28,6 +29,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// 设置是否允许打印
 /// @param enable 是否允许
 + (void)setEnableLogging:(BOOL)enable;
+
+/// 注册自定义原生插件
+/// @param plugin 自定义原生插件
++ (void)registerPlugin:(AlitaPlugin *)plugin;
 
 /// 打开一个微应用
 /// @param url file:// 或 http(s):// 开头的链接
