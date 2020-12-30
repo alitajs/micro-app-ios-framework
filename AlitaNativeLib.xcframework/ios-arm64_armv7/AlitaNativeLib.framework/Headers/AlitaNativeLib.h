@@ -20,3 +20,4 @@ FOUNDATION_EXPORT const unsigned char AlitaNativeLibVersionString[];
 #import <AlitaNativeLib/AlitaMicroApp.h>
 #import <AlitaNativeLib/AlitaWebViewController.h>
 #import <AlitaNativeLib/AlitaMicroAppConfig.h>
+#import <AlitaNativeLib/AlitaDebugViewController.h>
