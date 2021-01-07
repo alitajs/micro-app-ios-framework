@@ -15,6 +15,7 @@ typedef NS_ENUM(NSUInteger, AlitaCommandStatus) {
     AlitaCommandStatus_CLASS_NOT_FOUND_EXCEPTION,
     AlitaCommandStatus_INVALID_ACTION,
     AlitaCommandStatus_ERROR,
+    AlitaCommandStatus_NO_LOCATION_PERMISSION,
 };
 
 @interface AlitaCommandResult : NSObject

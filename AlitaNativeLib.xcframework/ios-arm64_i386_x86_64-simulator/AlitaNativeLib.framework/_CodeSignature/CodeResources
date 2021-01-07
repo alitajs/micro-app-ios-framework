@@ -14,7 +14,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		lqnuQ56PIeSHyGaSkpJeYS2alp8=
+		Udwg5zYCoJrukggWAqbIWig//eE=
 		</data>
 		<key>Headers/AlitaCommand.h</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Headers/AlitaCommandResult.h</key>
 		<data>
-		9ExVGkBZZbFRMSojrBmvNSWdfmw=
+		teZnRZ/vbe6BzSPbHR0RutIndJY=
 		</data>
 		<key>Headers/AlitaDebugViewController.h</key>
 		<data>
@@ -66,7 +66,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		KB0aNO9yHWzuT73OfspIWdg48KM=
+		LmeJe63L4vRRwZrpLtLc0StIONw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -101,11 +101,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			lqnuQ56PIeSHyGaSkpJeYS2alp8=
+			Udwg5zYCoJrukggWAqbIWig//eE=
 			</data>
 			<key>hash2</key>
 			<data>
-			OSo2dp9nYDkhO07xw/QRvaHsV0SqPhD+DzRoYbb6Vjo=
+			yd2qPOQSL41zFsxEg00N6OiIO8r4MjJA8aPLbIVwKN4=
 			</data>
 		</dict>
 		<key>Headers/AlitaCommand.h</key>
@@ -123,11 +123,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			9ExVGkBZZbFRMSojrBmvNSWdfmw=
+			teZnRZ/vbe6BzSPbHR0RutIndJY=
 			</data>
 			<key>hash2</key>
 			<data>
-			+8iXMTnGFO46JgyQedMK8auAE/1rs5OMn4fSLkI+X6U=
+			SnvvYARfrDmCwygqf5c4NEqo94wWK4VFr93Ml7f6HTE=
 			</data>
 		</dict>
 		<key>Headers/AlitaDebugViewController.h</key>
