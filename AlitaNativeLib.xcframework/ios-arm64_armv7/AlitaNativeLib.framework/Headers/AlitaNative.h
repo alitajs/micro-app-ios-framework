@@ -20,6 +20,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param appId 主应用id
 + (void)registerWithAppId:(NSString *)appId;
 
+/// 修改 api 请求地址，在 registerWithAppId 之前调用
++ (void)setApiBaseURLString:(NSString *)baseURLString;
+
 /// 主应用id
 + (NSString *)appId;
 

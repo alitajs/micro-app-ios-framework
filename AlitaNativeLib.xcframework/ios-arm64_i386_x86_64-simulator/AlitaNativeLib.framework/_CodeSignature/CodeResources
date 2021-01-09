@@ -14,7 +14,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		Udwg5zYCoJrukggWAqbIWig//eE=
+		X0b07TbSo8n7W5Iumva5HF8nJOc=
 		</data>
 		<key>Headers/AlitaCommand.h</key>
 		<data>
@@ -46,7 +46,7 @@
 		</data>
 		<key>Headers/AlitaNative.h</key>
 		<data>
-		l86qaahE618SNM55gHcnBuqpbSA=
+		QcksP3u0Dy3w26HzxqiFM3pdzHk=
 		</data>
 		<key>Headers/AlitaNativeLib.h</key>
 		<data>
@@ -66,7 +66,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		LmeJe63L4vRRwZrpLtLc0StIONw=
+		PfIBC7FOjFdT47Abpz2nCKQebZ0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -101,11 +101,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Udwg5zYCoJrukggWAqbIWig//eE=
+			X0b07TbSo8n7W5Iumva5HF8nJOc=
 			</data>
 			<key>hash2</key>
 			<data>
-			yd2qPOQSL41zFsxEg00N6OiIO8r4MjJA8aPLbIVwKN4=
+			hviOXoUsIlczXTNTVdpLWmSwPXK9euNVr3+Luiu6gPM=
 			</data>
 		</dict>
 		<key>Headers/AlitaCommand.h</key>
@@ -189,11 +189,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			l86qaahE618SNM55gHcnBuqpbSA=
+			QcksP3u0Dy3w26HzxqiFM3pdzHk=
 			</data>
 			<key>hash2</key>
 			<data>
-			oxRkhhhcV4NPbs7+z22RCGh0/vXueaKC2G2HB9tmsEU=
+			Euyjdqz3vcmXhZGGwhTFhmjanxMLJ5nVSzdW6G/gEFk=
 			</data>
 		</dict>
 		<key>Headers/AlitaNativeLib.h</key>
