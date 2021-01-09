@@ -77,16 +77,30 @@ platform :ios do
     sh "cd #{target_path}
     bundle exec fastlane build_AlitaNative
     "
-    framework_path = "#{target_path}/build/AlitaNativeLib.xcframework"
+    framework_path = "#{target_path}/build/AlitaNativeLib.framework"
     if (Dir.exist? "#{framework_path}")
       sh "cp -R #{framework_path} ../"
     else
       raise "build framework fail"
     end
 
+    xcframework_path = "#{target_path}/build/AlitaNativeLib.xcframework"
+    if (Dir.exist? "#{xcframework_path}")
+      sh "cp -R #{xcframework_path} ../"
+    else
+      raise "build xcframework fail"
+    end
+
     # bump podspec
+    # xcframework 版本
     version_bump_podspec(
       path: './AlitaNativeLib.podspec',
+      version_number: tag
+    )
+
+    # framework 版本
+    version_bump_podspec(
+      path: './AlitaNativeLibFwk.podspec',
       version_number: tag
     )
 
