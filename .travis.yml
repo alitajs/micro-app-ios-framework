@@ -7,4 +7,4 @@ install:
 script:
   - bundle exec fastlane build_framework source_code_url:https://$GITHUB_TOKEN@$SOURCE_CODE_URL
 notifications:
-   webhooks: $DITALK_WEBHOOK_TOKEN
+  webhooks: $DITALK_WEBHOOK_TOKEN
